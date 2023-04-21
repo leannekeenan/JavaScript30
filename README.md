@@ -1,4 +1,4 @@
-<h1>#JavaScript30</h1>
+<h1 align="center">#JavaScript30</h1>
 
 <p>
 Wes Bos's JavaScript 30 course is a free, online tutorial series that teaches JavaScript fundamentals 
