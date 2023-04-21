@@ -19,7 +19,7 @@ build simple applications including:</h3>
 <ul>
    <li>Virtual Drum Kit</li>
    <li>Local Storage Event Delegation</li>
-   <li>speech Recognition & Synthesis</li>
+   <li>Speech Recognition & Synthesis</li>
    <li>Event Capture</li>
    <li>Custom Video Player</li>
    <li>and more...</li>
