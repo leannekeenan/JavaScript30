@@ -1,15 +1,11 @@
 <h1 align="center">#JavaScript30</h1>
 
-<p>
+<p align="center">
 Wes Bos's JavaScript 30 course is a free, online tutorial series that teaches JavaScript fundamentals 
 through hands-on projects. The course consists of 30 video lessons, each of which covers a different 
 JavaScript concept or project.
 </p>
 
-<span>
-Link to the project can be found here: <a href="">
-l</a>
-</span>
 
 <p align="center">
      <img src="https://res.cloudinary.com/wesbos/image/fetch/w_700,q_auto,f_auto/https://courses.wesbos.com/images/JS3-social-share.png" alt="#Javascript30 w/ Wes Bos">
