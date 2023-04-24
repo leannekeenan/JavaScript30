@@ -1,0 +1,50 @@
+
+
+body {
+    margin: 0;
+    display: flex;
+    flex: 1;
+    min-height: 100vh;
+    align-items: center;
+    background: url('https://i.ibb.co/8bYt8pQ/background.webp');
+    background-size: cover
+  }
+
+  .clock {
+    width: 800px;
+    height: 800px;
+    border: 20px solid white;
+    border-radius: 50%;
+    margin: 50px auto;
+    position: relative;
+    padding: 2rem;
+    border: 25px solid orangered;
+    background: #F5F5F5;
+  }
+
+  .clock-face {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-3px); /* account for the height of the clock hands */
+    
+  }
+
+  .hand {
+    width: 45%;
+    height: 6px;
+    background: black;
+    position: absolute;
+    top: 50%;
+    transform-origin: 100%;/*changes the axis orgin from the default center (50%) to the far right (100%)*/
+    transform: rotate(90deg);
+    transition: all 0.05s;
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+   
+  }
+
+  
+.second-hand {
+    transform: rotate(0deg);
+    background: orangered;
+}
