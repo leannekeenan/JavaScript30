@@ -1,0 +1,26 @@
+:root {
+  --base: rgb(238, 152, 39);
+  --spacing: 10px;
+  --blur: 10px;
+}
+
+img {
+    padding: var(--spacing);
+    background: var(--base);
+    filter: blur(var(--blur));
+}
+
+.hl {
+    color: var(--base);
+}
+
+body {
+    text-align: center;
+    background: rgb(202, 175, 162);
+    font-weight: 100;
+    font-size: 30px;
+}
+
+.controls {
+    margin-bottom: 50px;
+}
