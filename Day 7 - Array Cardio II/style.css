@@ -1,0 +1,124 @@
+   const people = [
+      { name: 'Wes', year: 1988 },
+      { name: 'Kait', year: 1986 },
+      { name: 'Irv', year: 1970 },
+      { name: 'Lux', year: 2015 }
+    ];
+
+    const comments = [
+      { text: 'Love this!', id: 523423 },
+      { text: 'Super good', id: 823423 },
+      { text: 'You are the best', id: 2039842 },
+      { text: 'Ramen is my fav food ever', id: 123523 },
+      { text: 'Nice Nice Nice!', id: 542328 }
+    ];
+
+    /* Some and Every Checks*/
+      /*.some will check if at least one item in an array meets a conditional*/
+    /* Array.prototype.some() // is at least one person 19 or older?*/
+    let currentYear = (new Date()).getFullYear()/*sets value for current year*/
+    /*console.log(currentYear)  */
+
+    const areAdults = people.some(/*some people in the array are adults*/
+      function(person) {/*and each person in the array will have the a function enacted on it*/
+        if(currentYear - person.year < 19) {/* they will have their set array value for their year deducted from the set value for the current year*/(currentYEar - line 19)
+          return false; /*if there is no one over 19, the array will rturn false*/
+        }
+        else {
+          return true;/*if there is someone over 19, the arrya will return true*/
+        }
+      }
+    );
+      /*console.log(areAdults)*/
+/*--------------------------------------SHORTHAND FOR .some()-------------------------------------*/
+const areAnAdult = people.some(//some people 'areAnAdult' in the array
+  person => {/*each 'person' in the array will check*/
+    return currentYear - person.year >= 19 /*if their key value for year will be equal to or more than 19 if deducted from the current year (line 19)*/
+  }
+);
+console.log(areAnAdult)/*if there are, the array returns a boolean value of true*/
+/*------------------------------------------------------------------------------------------------*/
+
+/*---------------------------------implicit return for .some()------------------------------------*/
+const isAdult = people.some(
+  person => ((new Date()).getFullYear()) - person.year >= 19);
+/*console.log(isAdult)*/
+/*------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+  /*------------------------------------------------------------------------------------------------*/  
+     Array.prototype.every() /* is everyone 19 or older?*/
+const everyonesAnAdult = people.every(
+function(person) {
+   if(currentYear - person.year >= 19) {
+  return true;
+   }
+  else {
+    return false
+  }
+}
+)
+/*console.log(everyonesAnAdult)*/
+
+/*--------------------------------------SHORTHAND FOR .every()-------------------------------------*/
+const allAdults = people.every(//some people 'areAnAdult' in the array
+  person => {//each 'person' in the array will check
+    return currentYear - person.year >= 19 //if their key value for year will be equal to or more than 19 if deducted from the current year (line 19)
+  }
+);
+/*console.log(allAdults)*/
+
+
+/*---------------------------------implicit return for .every()------------------------------------*/
+
+const theyAreAllAdults = people.every(
+  person => (currentYear - people.year >= 19)
+)
+/*console.log(theyAreAllAdults)*/
+  /*------------------------------------------------------------------------------------------------*/ 
+
+
+
+
+  /*------------------------------------------------------------------------------------------------*/ 
+
+    /* Array.prototype.find()*?
+    /* Find is like filter, but instead returns just the one you are looking for*?
+    /* find the comment with the ID of 823423*?
+    /*instead of returning a subset, it returns the first item it finds*/
+const find = comments.find(
+function(comment) {
+  if(comment.id === 823423) {
+    return comment.text
+    return true;
+  }
+})
+/*console.log(find)*/
+/*--------------------------------------SHORTHAND FOR .find()-------------------------------------*/
+let findNum = comments.find(
+  comment => {
+    return comment.id === 523423
+  })
+/*console.log(findNum)*?
+
+/*---------------------------------implicit return for .find()------------------------------------*/
+/*let the object findId*/let findId = /*equal the array called*/comments/*and run the method .find on it*/.find(
+  comment/*to find the comment*/ => (comment.id === 542328)/*with the comment.id 542328*/
+)
+/*console.log(findId)*/
+/*let findId equal the array 'comments', that runs the method of find on itself to locate the 'comment' with the 'comment.id' with the value of '542328'*/
+/*------------------------------------------------------------------------------------------------*/ 
+    /*Array.prototype.findIndex()*/
+    /* Find the comment with this ID*/
+    /* delete the comment with the ID of 823423*/
+const index = comments.findIndex(
+  comment => (comment.id === 823423)
+  )
+
+console.log(index)
+comments.splice(index, 1)
+console.table(comments)
