@@ -1,0 +1,88 @@
+cosnt hero = document.querySelector('.hero');
+cosnt text = document.querySelector('h1');
+
+
+function shadow(e) {
+   cosnt {offsetWidth: width, offsetHeight: height} = hero;
+   let {offsetX: x, offsetY: y} = e;
+
+   if(this !== e.target) {
+      x = x + e.target.offsetLeft;
+      y = y + e.target.offsetRight;
+   }
+console.log(x, y);
+}
+
+hero.addEventListener('mousemove', shadow);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//dynamically updating the style if the h1 tag depending on where the mouse is on the page
+//1.create objects for the div and h1 tags
+
+let hero = document.querySelector('.hero');
+let text = hero.querySelector('h1')
+
+
+
+
+//2. create a function called 'shadow' and pass a parameter named 'event'
+function shadow(event) {
+  //get width and height of the div
+ // const width = hero.offsetWidth;
+  //const height = hero.offsetHeight;
+  /*
+  how to destructure above objects:
+  const {offsetWidth: width, offsetHeight: height} = hero
+  */
+  const {offsetWidth: width, offsetHeight: height} = hero;
+  //get location of the where the mouse cursor was
+  //let x = event.offsetX;
+  //let y = event.offsetY;
+  let {offsetX: x, offsetY: y}  = event;
+
+  
+  //even though we are listening for the mouse event on hero, if there are any children elements within the hero, the return will produce the actual x and y of the element we hovered over
+   //this is the thing listened for (hero)
+  //target is thing that was triggered on (h1)
+
+
+  //if hero and this are not the same
+  if(this !== event.target) {//can use this b/c event is a parameter of the function
+    
+    /*if someone hovers in the top left of the h1, add 2px and whatever is on eht left and top*/
+    //x equals x plus event.target.offsetLeft
+    x = x + event.offsetLeft;
+    y = y + event.offsetTop;
+  }
+  
+    console.log(x, y);
+  //console.log(event)
+}
+//3. listen for a mouse move event on the previously defined JS object named hero and pass the function shadow 
+hero.addEventListener('mousemove', shadow)
+
