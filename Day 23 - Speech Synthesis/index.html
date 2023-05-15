@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Textus Text-to-Speech Voiceinator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="voiceinator">
+  
+        <select name="voice" id="voices">
+          <option value="">Select A Voice</option>
+        </select>
+  
+        <label for="rate">Rate:</label>
+        <input name="rate" type="range" min="0" max="3" value="1" step="0.1">
+  
+        <label for="pitch">Pitch:</label>
+  
+        <input name="pitch" type="range" min="0" max="2" step="0.1">
+        <textarea name="text">Type Here and select a voice, pitch and rate to change the speaking voice👍</textarea>
+        <button id="stop">Stop!</button>
+        <button id="speak">Speak</button>
+  
+      </div>
+      <script src="script.js"></script>
+</body>
+</html>
+<!-- Rate pitch and text names all need to match the property in order for the program voice to recognize it and use it to speak-->
